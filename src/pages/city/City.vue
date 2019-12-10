@@ -1,7 +1,7 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-search></city-search>
+    <city-search :cities="cities"></city-search>
     <city-list
      :cities="cities"
      :hot="hotCities"
@@ -46,7 +46,6 @@ export default {
         const data = res.data
         this.cities = data.cities
         this.hotCities = data.hotCities
-        console.log(data.cities)
       }
     },
     handleLetterChange (letter) {
